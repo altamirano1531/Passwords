@@ -8,6 +8,7 @@ from cryptography.fernet import Fernet
 import os
 
 
+#First modification
 fpath_data = os.path.realpath('./test3.enc')
 fpath_key = os.path.realpath('./key.key')
 
