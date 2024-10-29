@@ -8,11 +8,13 @@ from cryptography.fernet import Fernet
 import os
 
 
-#First modification
-fpath_data = os.path.realpath('./test3.enc')
+# Define the filepath to the password file, test file and encryption keys file 
+#fpath_data = os.path.realpath('./test3.enc')
+fpath_data = os.path.realpath('./passwords.enc')
 fpath_key = os.path.realpath('./key.key')
 
-# Global variable to determine if a new entry is done or it is an update to existing record.
+# Global variable to determine if a new record entry is done or the position of a new record
+# or if a record is Focused by double clicking on it.
 newEntry = False
 position = 0
 Focused = False
@@ -25,9 +27,6 @@ file.close()
 
 ##################### DECRIPTION METHOD ###########################
 ## Read file in binary. 
-#with open("c:\\workarea\\python\\passwords\\test3.enc", 'rb') as f:
-#    bindata = f.read()
-
 with open(fpath_data, 'rb') as f:
     bindata = f.read()
 
@@ -81,7 +80,7 @@ label_5 = tk.Label(frame, text="").grid(row=8, column=0)
 Label_6 = tk.Label(frame, text="User Message").grid(row=10, column=0, pady=10)
 entry_6 = tk.Entry(frame, width=30)
 
-# Initialize with first item and Position the labels and entry fields in the grid
+# Initialize with first item and position the labels and entry fields in the grid
 entry.grid(row=3, column=1)
 entry.insert(0,sorted_data[0]["name"])
 entry_1.grid(row=4, column=1)
@@ -98,6 +97,7 @@ entry_6.insert(0,"")
 # Place cursor selection on first item
 listbox.selection_set(position)
 
+# Clear the user message field
 entry_6.delete(0, END)
 entry_6.insert(0, "Double click to select site")
 
@@ -131,6 +131,8 @@ def delete():
         entry_6.insert(0, "Double click to select site")
         return
 
+    # Delete the selected record from the list and then from the sorted data then get the 
+    # information about the next site  
     position = int(listbox.curselection()[0]) 
     listbox.delete(position, last=position)
     sorted_data.remove(sorted_data[position])
@@ -140,10 +142,11 @@ def delete():
     newEntry = False
     Focused = False
 
+    # Clear the user message field
     entry_6.delete(0, END)
     entry_6.insert(0, "Double click to select site")
 
-# create data dictionary to put in file
+    # create data dictionary to put in file
     data = {"Sites":sorted_data}
 
 ########################### ENCRIPT METHOD
@@ -228,15 +231,15 @@ def save():
     listbox.see(position)
 
 
-# create data dictionary to put in file
+    # create data dictionary to put in file
     data = {"Sites":sorted_data}
 
-# reset the user message text for selection to new site 
+    # reset the user message text for selection to new site 
     entry_6.delete(0, END)
     entry_6.insert(0, "Double click to select site")
 
-# This code to be un-commented and used to create a 
-# json backup file once in a while using the save button
+    # This code to be un-commented and used to create a 
+    # json backup file once in a while using the save button
     with open("./information.json", 'w') as f:
         json.dump(data, f, indent=2)
 
@@ -257,8 +260,6 @@ def save():
 def new():
     global newEntry, position, Focused
 
-    #position = len(sorted_data)-1
-
     Focused = True
 
     entry.delete(0, END)
@@ -269,6 +270,7 @@ def new():
 
     newEntry = True
     
+    # Clear the user message field
     entry_6.delete(0, END)
     entry_6.insert(0, "Press SAVE to save changes")
 
@@ -280,6 +282,7 @@ def list_clicked(event):
 
     Focused = True
 
+    # Clear the user message field
     entry_6.delete(0, END)
     entry_6.insert(0, "Click SAVE to save changes.")
 
@@ -300,6 +303,7 @@ button_save.grid(row=8, column=1)
 button_new = tk.Button(frame, text=" NEW ", command=new)
 button_new.grid(row=8, column=1, sticky=E)
 
+# Run the main loop
 window.mainloop()
 
 # Update the JSON file to show last modifications.

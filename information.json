@@ -5,21 +5,21 @@
       "username": "Admin",
       "password": "Turicates1!",
       "website": "https://aws.amazon.com/",
-      "notes": "My Text\nAnd More Text\nmore\nand more\nand more\n\n\n\n\n\n"
+      "notes": "AWS Notes\n\n"
     },
     {
       "name": "AWS - Root 725845915872",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1!",
       "website": "https://aws.amazon.com/",
-      "notes": "AWS\n\n"
+      "notes": ""
     },
     {
       "name": "Academy",
       "username": "altamirano123",
       "password": "Turicates1!",
       "website": "https://d.comenity.net/ac/academy/secure/home",
-      "notes": "Academy Notes\nMOre notes\n\n"
+      "notes": ""
     },
     {
       "name": "Alight",
@@ -33,28 +33,42 @@
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1!",
       "website": "https://www.apple.com",
-      "notes": "Apple text\n\n"
-    },
-    {
-      "name": "Art",
-      "username": "sads",
-      "password": "asd",
-      "website": "asd",
-      "notes": "\n"
+      "notes": ""
     },
     {
       "name": "BMW Motorrad",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1!",
       "website": "https://https://www.shopbmwmotorcycles.com/",
-      "notes": "asdasd\nmo\tto\trad\n\n\n"
+      "notes": "BMW Notes\n"
+    },
+    {
+      "name": "BestBuy",
+      "username": "altamirano1531@gmail.com",
+      "password": "Turicates1",
+      "website": "https://www.bestbuy.com/site/customer/myaccount",
+      "notes": ""
+    },
+    {
+      "name": "Blah",
+      "username": "fds",
+      "password": "sdf",
+      "website": "sdf",
+      "notes": "sdf\n"
+    },
+    {
+      "name": "Blue Cross and Blue Shield",
+      "username": "altamirano123",
+      "password": "Pfizer2020!",
+      "website": "https://www.bcbstx.com/",
+      "notes": ""
     },
     {
       "name": "CIGNA",
       "username": "altamirano1960",
       "password": "Turicates1",
       "website": "https://www.cigna.com/",
-      "notes": "\n\n\n\n"
+      "notes": ""
     },
     {
       "name": "CIGNA Dental",
@@ -75,6 +89,13 @@
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
       "website": "https://www.coursera.org/",
+      "notes": ""
+    },
+    {
+      "name": "Doctors Office Portal",
+      "username": "altamirano1531@gmail.com",
+      "password": "Turicates1#",
+      "website": " https://health.healow.com/sugarlakes",
       "notes": ""
     },
     {
@@ -225,11 +246,25 @@
       "notes": ""
     },
     {
+      "name": "Methodist",
+      "username": "altamirano",
+      "password": "Turicates1",
+      "website": "https://www.houstonmethodist.org/",
+      "notes": ""
+    },
+    {
       "name": "MongoDB",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
       "website": "https://www.mongodb.com/",
       "notes": ""
+    },
+    {
+      "name": "My new",
+      "username": "",
+      "password": "",
+      "website": "",
+      "notes": "\n"
     },
     {
       "name": "MyACM",
@@ -246,13 +281,6 @@
       "notes": ""
     },
     {
-      "name": "MyNewSite",
-      "username": "asd",
-      "password": "asd",
-      "website": "ads",
-      "notes": "asd\n"
-    },
-    {
       "name": "MySQL",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
@@ -264,6 +292,13 @@
       "username": "altamirano@gmail.com",
       "password": "ElVirus1960",
       "website": "https://www.netflix.com/Login",
+      "notes": ""
+    },
+    {
+      "name": "New",
+      "username": "Pfizer2020!",
+      "password": "Pfizer2020!",
+      "website": "",
       "notes": ""
     },
     {
@@ -309,25 +344,18 @@
       "notes": ""
     },
     {
+      "name": "SOS",
+      "username": "",
+      "password": "",
+      "website": "",
+      "notes": "\n"
+    },
+    {
       "name": "Samsung",
       "username": "altamirano1531@gmail.com",
       "password": "ElVirus1960",
       "website": "https://account.samsung.com/membership/intro",
       "notes": ""
-    },
-    {
-      "name": "Samsung3",
-      "username": "asd",
-      "password": "asd",
-      "website": "asd",
-      "notes": "asd\n"
-    },
-    {
-      "name": "Smasung2",
-      "username": "asd",
-      "password": "ads",
-      "website": "dsa",
-      "notes": "asd\n"
     },
     {
       "name": "SouthWest",
@@ -348,13 +376,20 @@
       "username": "altamirano123",
       "password": "Turicates1",
       "website": "https://mystanfordconnection.stanford.edu/portal/logon.do?method=load",
-      "notes": "\n"
+      "notes": ""
     },
     {
       "name": "Stanford Slack",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1!",
       "website": "https://stanford.enterprise.slack.com/signing",
+      "notes": ""
+    },
+    {
+      "name": "State Farm",
+      "username": "altamirano123",
+      "password": "ElVirus1960!",
+      "website": "https://www.statefarm.com/",
       "notes": ""
     },
     {
@@ -372,46 +407,32 @@
       "notes": ""
     },
     {
-      "name": "Test 100",
-      "username": "fdsa",
-      "password": "asfd",
-      "website": "afsd",
-      "notes": "asf\n"
-    },
-    {
-      "name": "Test 101",
-      "username": "",
-      "password": "",
-      "website": "",
-      "notes": "\n"
-    },
-    {
-      "name": "Test 105",
-      "username": "",
-      "password": "",
-      "website": "",
-      "notes": "\n"
-    },
-    {
-      "name": "Test site",
-      "username": "sad",
-      "password": "asd",
-      "website": "asd",
-      "notes": "asd\n"
+      "name": "TurboTax",
+      "username": "altamirano1531@gmail.com",
+      "password": "Turicates1!",
+      "website": "https://turbotax.intuit.com/",
+      "notes": ""
     },
     {
       "name": "TurboTax2",
       "username": "altamirano456",
       "password": "ElVirus1!",
       "website": "https://turbotax.intuit.com/",
-      "notes": "qweqweqweqweqweqweqweqweqweqweqwe\n"
+      "notes": ""
+    },
+    {
+      "name": "TxTag",
+      "username": "altamirano1531@gmail.com",
+      "password": "Turicates1!",
+      "website": "https://www.txtag.org",
+      "notes": ""
     },
     {
       "name": "USPS",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
       "website": "https://www.usps.com/",
-      "notes": "\nnotes 2\nnotes 3\nnotes 4\nnotes 5\n\n\n"
+      "notes": "USPS notes\n"
     },
     {
       "name": "Ubuntu",
@@ -463,31 +484,10 @@
       "notes": ""
     },
     {
-      "name": "ZZZ",
-      "username": "last record",
-      "password": "",
-      "website": "",
-      "notes": "\n"
-    },
-    {
-      "name": "ZZZZ",
-      "username": "sdas",
-      "password": "asd",
-      "website": "asda",
-      "notes": "\n"
-    },
-    {
-      "name": "ZZZZZ",
-      "username": "ad",
-      "password": "asd",
-      "website": "asd",
-      "notes": "\n"
-    },
-    {
-      "name": "Zealot",
-      "username": "",
-      "password": "",
-      "website": "",
+      "name": "Zoo",
+      "username": "sdf",
+      "password": "sdf",
+      "website": "sdf",
       "notes": "\n"
     },
     {
@@ -495,21 +495,14 @@
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
       "website": "https://zoom.us/",
-      "notes": "\n"
+      "notes": ""
     },
     {
       "name": "reddit",
       "username": "altamirano123",
       "password": "ElVirus1960",
       "website": "https://www.reddit.com/",
-      "notes": "reddit notes\nmore reddit\n"
-    },
-    {
-      "name": "reddit10",
-      "username": "",
-      "password": "",
-      "website": "",
-      "notes": "\n"
+      "notes": ""
     }
   ]
 }
