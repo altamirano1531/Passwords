@@ -51,10 +51,10 @@
     },
     {
       "name": "Blah",
-      "username": "fds",
+      "username": "f",
       "password": "sdf",
       "website": "sdf",
-      "notes": "sdf\n"
+      "notes": "sdfs\n"
     },
     {
       "name": "Blue Cross and Blue Shield",
@@ -344,13 +344,6 @@
       "notes": ""
     },
     {
-      "name": "SOS",
-      "username": "",
-      "password": "",
-      "website": "",
-      "notes": "\n"
-    },
-    {
       "name": "Samsung",
       "username": "altamirano1531@gmail.com",
       "password": "ElVirus1960",
@@ -484,13 +477,6 @@
       "notes": ""
     },
     {
-      "name": "Zoo",
-      "username": "sdf",
-      "password": "sdf",
-      "website": "sdf",
-      "notes": "\n"
-    },
-    {
       "name": "Zoom",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
@@ -503,6 +489,13 @@
       "password": "ElVirus1960",
       "website": "https://www.reddit.com/",
       "notes": ""
+    },
+    {
+      "name": "z",
+      "username": "",
+      "password": "",
+      "website": "",
+      "notes": "\n"
     }
   ]
 }

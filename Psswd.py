@@ -7,11 +7,18 @@ from tkinter import *
 from cryptography.fernet import Fernet
 import os
 
+#########################################################
+# NOTE: Use these paths When running with the Psswd.exe #
+#########################################################
+# Define the filepath to the password file, and encryption keys file 
+fpath_data = os.path.realpath('..\\passwords.enc')
+fpath_key = os.path.realpath('..\\key.key')
 
-# Define the filepath to the password file, test file and encryption keys file 
-#fpath_data = os.path.realpath('./test3.enc')
-fpath_data = os.path.realpath('./passwords.enc')
-fpath_key = os.path.realpath('./key.key')
+########################################################
+# NOTE: Use these paths When running with the Psswd.py #
+########################################################
+#fpath_data = os.path.realpath('.\\passwords.enc')
+#fpath_key = os.path.realpath('.\\key.key')
 
 # Global variable to determine if a new record entry is done or the position of a new record
 # or if a record is Focused by double clicking on it.
@@ -19,11 +26,11 @@ newEntry = False
 position = 0
 Focused = False
 
-# Get the key to decript/encript the data file.
-file = open(fpath_key, 'rb')
-key = file.read()
-file.close()
+# Decrypt key in cae of lost key.key file
 #key = "Wx7d51FG-wWn1v3z7t-zXgHS8t5erXgdVT0IWLzzb_w="
+
+with open(fpath_key, 'rb') as f:
+    key = f.read()
 
 ##################### DECRIPTION METHOD ###########################
 ## Read file in binary. 
@@ -101,7 +108,9 @@ listbox.selection_set(position)
 entry_6.delete(0, END)
 entry_6.insert(0, "Double click to select site")
 
+######################################################################
 # Get new site information, delete field data and load selection.
+######################################################################
 def getSite():
     global position
 
@@ -118,7 +127,10 @@ def getSite():
     entry_3.insert(0, sorted_data[position]["website"])
     entry_4.insert('1.0', sorted_data[position]["notes"])
 
-# Delete the site from dictionary, position the list pointer to the top and get site. Update file.
+########################################################################
+# Delete the site from dictionary, position the list pointer to the top 
+# and get site. Update file.
+########################################################################
 def delete():
     global position, Focused 
 
@@ -155,12 +167,9 @@ def delete():
     encrypted = encryptor.encrypt(bindata)
 
     #Write the encrypted data into the file.
-    #with open("c:\\workarea\\python\\passwords\\test3.enc",'wb') as f:
-    #    f.write(encrypted)
-
     with open(fpath_data,'wb') as f:
         f.write(encrypted)
-############################ END OF DECRIPTION METHOD
+############################ END OF ENCRIPTION METHOD
 
 # Save and edit or a new entry. If new entry create a dict with new site and insert into data dict
 # if an edit update data dict and in both cases update the list. Udpate the file
@@ -230,7 +239,6 @@ def save():
     listbox.selection_set(position)
     listbox.see(position)
 
-
     # create data dictionary to put in file
     data = {"Sites":sorted_data}
 
@@ -249,9 +257,6 @@ def save():
     encrypted = encryptor.encrypt(bindata)
 
     #Write the encrypted data into the file.
-    #with open("c:\\workarea\\python\\passwords\\test3.enc",'wb') as f:
-    #    f.write(encrypted)
-
     with open(fpath_data,'wb') as f:
         f.write(encrypted)
 ############################### END OF ENCRIPTION METHOD
@@ -287,9 +292,6 @@ def list_clicked(event):
     entry_6.insert(0, "Click SAVE to save changes.")
 
     getSite()
-
-
-
 
 # Bind the listox events to list_clicked.
 listbox.bind('<Double-Button-1>', list_clicked)
