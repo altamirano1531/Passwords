@@ -21,10 +21,9 @@ fpath_key = os.path.realpath('..\\key.key')
 #fpath_key = os.path.realpath('.\\key.key')
 
 # Global variable to determine if a new record entry is done or the position of a new record
-# or if a record is Focused by double clicking on it.
+# or if a record is Focused by clicking on it.
 newEntry = False
 position = 0
-Focused = False
 
 # Decrypt key in cae of lost key.key file
 #key = "Wx7d51FG-wWn1v3z7t-zXgHS8t5erXgdVT0IWLzzb_w="
@@ -106,41 +105,42 @@ listbox.selection_set(position)
 
 # Clear the user message field
 entry_6.delete(0, END)
-entry_6.insert(0, "Double click to select site")
+entry_6.insert(0, "Click to select site")
 
 ######################################################################
-# Get new site information, delete field data and load selection.
+# Get new site information, delete field data and load selection. Prevent 
+# The selection of an empty tuple when the tab key is used to move between
+# fileds.
 ######################################################################
 def getSite():
     global position
 
-    position = int(listbox.curselection()[0])
+    if len(listbox.curselection()) != 0 :
+            position = int(listbox.curselection()[0])
+            entry.delete(0, END)
+            entry_1.delete(0, END)
+            entry_2.delete(0, END)
+            entry_3.delete(0, END)
+            entry_4.delete('1.0', END)
+            entry.insert(0,sorted_data[position]["name"]) 
+            entry_1.insert(0, sorted_data[position]["username"])
+            entry_2.insert(0, sorted_data[position]["password"])
+            entry_3.insert(0, sorted_data[position]["website"])
+            entry_4.insert('1.0', sorted_data[position]["notes"])
 
-    entry.delete(0, END)
-    entry_1.delete(0, END)
-    entry_2.delete(0, END)
-    entry_3.delete(0, END)
-    entry_4.delete('1.0', END)
-    entry.insert(0,sorted_data[position]["name"]) 
-    entry_1.insert(0, sorted_data[position]["username"])
-    entry_2.insert(0, sorted_data[position]["password"])
-    entry_3.insert(0, sorted_data[position]["website"])
-    entry_4.insert('1.0', sorted_data[position]["notes"])
-
+ 
 ########################################################################
 # Delete the site from dictionary, position the list pointer to the top 
 # and get site. Update file.
 ########################################################################
 def delete():
-    global position, Focused 
-
-    if Focused == False : return
+    global position
 
     # Avoid Focusing a site and then clicking on another site before pressing DELETE
     curr_position = int(listbox.curselection()[0])
     if curr_position != position:
         entry_6.delete(0, END)
-        entry_6.insert(0, "Double click to select site")
+        entry_6.insert(0, "Click to select site")
         return
 
     # Delete the selected record from the list and then from the sorted data then get the 
@@ -152,11 +152,11 @@ def delete():
     listbox.select_set(listbox.index(ACTIVE))
     getSite()
     newEntry = False
-    Focused = False
+    #Focused = False
 
     # Clear the user message field
     entry_6.delete(0, END)
-    entry_6.insert(0, "Double click to select site")
+    entry_6.insert(0, "Click to select site")
 
     # create data dictionary to put in file
     data = {"Sites":sorted_data}
@@ -174,17 +174,7 @@ def delete():
 # Save and edit or a new entry. If new entry create a dict with new site and insert into data dict
 # if an edit update data dict and in both cases update the list. Udpate the file
 def save():
-    global newEntry, position, Focused
-
-    # Focused means that the selected record was double clicked, not just clicked once.
-    if Focused == False : return
-
-    # Avoid Focusing a site and then clicking on another site before pressing SAVE
-    curr_position = int(listbox.curselection()[0])
-    if curr_position != position:
-        entry_6.delete(0, END)
-        entry_6.insert(0, "Double click to select site")
-        return
+    global newEntry, position
 
     # Make sure that the name is not empty. If so, signal the user and return.
     n = entry.get()
@@ -196,7 +186,7 @@ def save():
     if newEntry: 
     # Make sure Name is not already in the sorted data set. If so, signal the user to enter new name and exit.
         for indx in range (0,len(sorted_data)):
-            if n in sorted_data[indx].values(): 
+            if n == sorted_data[indx]['name']: 
                 entry_6.delete(0, END)
                 entry_6.insert(0, "Repeated Name. Re-enter Name")
                 return
@@ -217,7 +207,7 @@ def save():
         
         # Figure out the position of th enew entry
         for indx in range (0,len(sorted_data)):
-            if n in sorted_data[indx].values(): 
+            if n == sorted_data[indx]['name']: 
                 position = indx
                 break
         
@@ -232,8 +222,6 @@ def save():
         sorted_data[position]['notes'] = entry_4.get("1.0","end")
         listbox.delete(position)
         listbox.insert(position, sorted_data[position]['name'])
-    
-    Focused = False
 
     # Ensure the list cursor stays in selected record.
     listbox.selection_set(position)
@@ -244,7 +232,7 @@ def save():
 
     # reset the user message text for selection to new site 
     entry_6.delete(0, END)
-    entry_6.insert(0, "Double click to select site")
+    entry_6.insert(0, "Click to select site")
 
     # This code to be un-commented and used to create a 
     # json backup file once in a while using the save button
@@ -263,13 +251,13 @@ def save():
 
 # New record entry, delete data fields and set flag for save.
 def new():
-    global newEntry, position, Focused
+    global newEntry, position
 
-    Focused = True
+    #Focused = True
 
     entry.delete(0, END)
     entry_1.delete(0, END)
-    entry_2.delete(0, END)
+    entry_2.delete(0, END)  
     entry_3.delete(0, END)
     entry_4.delete('1.0', END)
 
@@ -280,12 +268,8 @@ def new():
     entry_6.insert(0, "Press SAVE to save changes")
 
 
-# Event handler for listbox double click. This action updates site information on user output.
+# Event handler for listbox click. This action updates site information on user output.
 def list_clicked(event):
-    
-    global Focused
-
-    Focused = True
 
     # Clear the user message field
     entry_6.delete(0, END)
@@ -293,8 +277,14 @@ def list_clicked(event):
 
     getSite()
 
-# Bind the listox events to list_clicked.
-listbox.bind('<Double-Button-1>', list_clicked)
+
+#def tabbed(event):
+#    tab = True
+
+
+# Bind the listox virtual event to list_clicked.
+#listbox.bind('<Tab>', tabbed)
+listbox.bind('<<ListboxSelect>>', list_clicked)
 
 button_delete = tk.Button(frame, text="DELETE", command=delete)
 button_delete.grid(row=8, column=1, sticky=W)

@@ -5,14 +5,14 @@
       "username": "Admin",
       "password": "Turicates1!",
       "website": "https://aws.amazon.com/",
-      "notes": "AWS Notes\n\n"
+      "notes": "AWS Notes 12\n\n\n\n\n\n\n\n\n"
     },
     {
       "name": "AWS - Root 725845915872",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1!",
       "website": "https://aws.amazon.com/",
-      "notes": ""
+      "notes": "Save notes\n"
     },
     {
       "name": "Academy",
@@ -26,7 +26,7 @@
       "username": "altamirano123",
       "password": "ElNeowise2020!",
       "website": "https://leplb0260.upoint.alight.com/web/schlumberger/login?forkPage=false#/routing",
-      "notes": ""
+      "notes": "Alight comments\n"
     },
     {
       "name": "Apple",
@@ -96,7 +96,7 @@
       "username": "altamirano123",
       "password": "Turicates1",
       "website": "edx.org",
-      "notes": ""
+      "notes": "\n"
     },
     {
       "name": "Enerwisely",
@@ -201,7 +201,7 @@
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
       "website": "https://mitpress.mit.edu/",
-      "notes": ""
+      "notes": "Notas\n"
     },
     {
       "name": "MIT Technology Review",
@@ -243,7 +243,7 @@
       "username": "altamirano",
       "password": "Turicates1",
       "website": "https://www.houstonmethodist.org/",
-      "notes": ""
+      "notes": "\n"
     },
     {
       "name": "MongoDB",
@@ -251,13 +251,6 @@
       "password": "Turicates1",
       "website": "https://www.mongodb.com/",
       "notes": ""
-    },
-    {
-      "name": "My new",
-      "username": "",
-      "password": "",
-      "website": "",
-      "notes": "\n"
     },
     {
       "name": "MyACM",
@@ -281,13 +274,6 @@
       "notes": ""
     },
     {
-      "name": "MySite",
-      "username": "asd",
-      "password": "asd",
-      "website": "asd",
-      "notes": "asd\n"
-    },
-    {
       "name": "NetFlix",
       "username": "altamirano@gmail.com",
       "password": "ElVirus1960",
@@ -295,25 +281,11 @@
       "notes": ""
     },
     {
-      "name": "New",
-      "username": "Pfizer2020!",
-      "password": "Pfizer2020!",
-      "website": "",
-      "notes": "asdasdasdsd\n"
-    },
-    {
       "name": "Pandora",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
       "website": "https://www.pandora.com/collection",
       "notes": ""
-    },
-    {
-      "name": "Pandora2",
-      "username": "",
-      "password": "",
-      "website": "",
-      "notes": "\n"
     },
     {
       "name": "PortfolioVisualizer",
@@ -439,7 +411,7 @@
       "username": "altamirano123",
       "password": "Turicates1",
       "website": "Website",
-      "notes": ""
+      "notes": "notes\n"
     },
     {
       "name": "Verizon",
@@ -447,6 +419,13 @@
       "password": "Turicates1",
       "website": "https://www.verizon.com/",
       "notes": ""
+    },
+    {
+      "name": "Via Benefits",
+      "username": "altamirano1531@gmail.com",
+      "password": "Turicates1!",
+      "website": "https://apps.viabenefits.com/home",
+      "notes": "\n\n"
     },
     {
       "name": "Vivid Seats",
@@ -467,21 +446,21 @@
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1!",
       "website": "http://xcs234-scpd.slack.com/",
-      "notes": ""
+      "notes": "Course notes\n"
     },
     {
       "name": "Xfinity",
       "username": "altamirano123",
       "password": "Turicates1",
       "website": "https://my.xfinity.com/",
-      "notes": ""
+      "notes": "Xfinity notes 100\n\n"
     },
     {
       "name": "Yahoo",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
       "website": "https://finance.yahoo.com/",
-      "notes": ""
+      "notes": "\n"
     },
     {
       "name": "Zoom",
@@ -491,11 +470,18 @@
       "notes": ""
     },
     {
+      "name": "Zoom2",
+      "username": "altamirano1531@gmail.com",
+      "password": "",
+      "website": "",
+      "notes": "\n\nZoom notes\n"
+    },
+    {
       "name": "reddit",
       "username": "altamirano123",
       "password": "ElVirus1960",
       "website": "https://www.reddit.com/",
-      "notes": ""
+      "notes": "\n"
     }
   ]
 }
