@@ -12,7 +12,7 @@
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1!",
       "website": "https://aws.amazon.com/",
-      "notes": "Save notes\n"
+      "notes": "\n\n"
     },
     {
       "name": "Academy",
@@ -47,13 +47,6 @@
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
       "website": "https://www.bestbuy.com/site/customer/myaccount",
-      "notes": ""
-    },
-    {
-      "name": "Blue Cross and Blue Shield",
-      "username": "altamirano123",
-      "password": "Pfizer2020!",
-      "website": "https://www.bcbstx.com/",
       "notes": ""
     },
     {
@@ -96,14 +89,7 @@
       "username": "altamirano123",
       "password": "Turicates1",
       "website": "edx.org",
-      "notes": ""
-    },
-    {
-      "name": "Enerwisely",
-      "username": "EnerWisely1",
-      "password": "Bienvenido2022!",
-      "website": "arturoaltamirano1@ewisely.live",
-      "notes": ""
+      "notes": "\n"
     },
     {
       "name": "GitHub",
@@ -260,18 +246,11 @@
       "notes": ""
     },
     {
-      "name": "MyAskHR",
-      "username": "altamirano1531@gmail.com",
-      "password": "Turicates1!",
-      "website": "https://myaskhr.slb.com/MRcgi/MRentrancePage.pl",
-      "notes": ""
-    },
-    {
-      "name": "MySQL",
-      "username": "altamirano1531@gmail.com",
-      "password": "Turicates1",
-      "website": "https://login.oracle.com/mysso/signon.jsp",
-      "notes": ""
+      "name": "Mysite",
+      "username": "asd",
+      "password": "asd",
+      "website": "",
+      "notes": "q\tqw\n"
     },
     {
       "name": "NetFlix",
@@ -292,20 +271,6 @@
       "username": "altamirano123",
       "password": "Pfizer2020!",
       "website": "https://www.portfoliovisualizer.com/",
-      "notes": ""
-    },
-    {
-      "name": "Pottery Barn",
-      "username": "altamirano1531@gmail.com",
-      "password": "Turicates1",
-      "website": "https://www.potterybarn.com/",
-      "notes": ""
-    },
-    {
-      "name": "Quantum",
-      "username": " arturo@quantumnewenergy.com",
-      "password": "Bienvenido2022!",
-      "website": " \n\nhttps://sso.godaddy.com/?realm=pass&app=o365",
       "notes": ""
     },
     {
@@ -407,13 +372,6 @@
       "notes": "USPS notes\n"
     },
     {
-      "name": "Ubuntu",
-      "username": "altamirano123",
-      "password": "Turicates1",
-      "website": "Website",
-      "notes": "notes\n"
-    },
-    {
       "name": "Verizon",
       "username": "altamirano123",
       "password": "Turicates1",
@@ -470,13 +428,6 @@
       "notes": ""
     },
     {
-      "name": "Zoom2",
-      "username": "altamirano1531@gmail.com",
-      "password": "",
-      "website": "",
-      "notes": "\n\nZoom notes\n"
-    },
-    {
       "name": "reddit",
       "username": "altamirano123",
       "password": "ElVirus1960",
@@ -485,10 +436,10 @@
     },
     {
       "name": "z",
-      "username": "asd",
+      "username": "",
       "password": "",
       "website": "",
-      "notes": "notas\nass\nas\n"
+      "notes": "\n"
     }
   ]
 }

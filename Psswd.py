@@ -7,18 +7,22 @@ from tkinter import *
 from cryptography.fernet import Fernet
 import os
 
-#########################################################
-# NOTE: Use these paths When running with the Psswd.exe #
-#########################################################
-# Define the filepath to the password file, and encryption keys file 
-fpath_data = os.path.realpath('..\\passwords.enc')
-fpath_key = os.path.realpath('..\\key.key')
+###################################################################
+# Function needed to resolve PyInstaller issue with relative path #
+###################################################################
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 ########################################################
 # NOTE: Use these paths When running with the Psswd.py #
 ########################################################
-#fpath_data = os.path.realpath('.\\passwords.enc')
-#fpath_key = os.path.realpath('.\\key.key')
+fpath_data = resource_path('./passwords.enc')
+fpath_key = resource_path('./key.key')
+fpath_info = resource_path('./information.json')
 
 # Global variable to determine if a new record entry is done or the position of a new record
 # or if a record is Focused by clicking on it.
@@ -152,7 +156,6 @@ def delete():
     listbox.select_set(listbox.index(ACTIVE))
     getSite()
     newEntry = False
-    #Focused = False
 
     # Clear the user message field
     entry_6.delete(0, END)
@@ -236,7 +239,7 @@ def save():
 
     # This code to be un-commented and used to create a 
     # json backup file once in a while using the save button
-    with open("./information.json", 'w') as f:
+    with open(fpath_info, 'w') as f:
         json.dump(data, f, indent=2)
 
 ############################## ENCRIPTION METHOD
@@ -252,8 +255,6 @@ def save():
 # New record entry, delete data fields and set flag for save.
 def new():
     global newEntry, position
-
-    #Focused = True
 
     entry.delete(0, END)
     entry_1.delete(0, END)
@@ -278,12 +279,7 @@ def list_clicked(event):
     getSite()
 
 
-#def tabbed(event):
-#    tab = True
-
-
 # Bind the listox virtual event to list_clicked.
-#listbox.bind('<Tab>', tabbed)
 listbox.bind('<<ListboxSelect>>', list_clicked)
 
 button_delete = tk.Button(frame, text="DELETE", command=delete)
@@ -298,6 +294,3 @@ button_new.grid(row=8, column=1, sticky=E)
 # Run the main loop
 window.mainloop()
 
-# Update the JSON file to show last modifications.
-with open("./information.json", 'w') as f:
-    json.dump(data, f, indent=2)
