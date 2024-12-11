@@ -20,9 +20,11 @@ def resource_path(relative_path):
 ########################################################
 # NOTE: Use these paths When running with the Psswd.py #
 ########################################################
-fpath_data = resource_path('./passwords.enc')
-fpath_key = resource_path('./key.key')
-fpath_info = resource_path('./information.json')
+fpath_data = resource_path('passwords.enc')
+print(fpath_data)
+print('start')
+fpath_key = resource_path('key.key')
+fpath_info = resource_path('information.json')
 
 # Global variable to determine if a new record entry is done or the position of a new record
 # or if a record is Focused by clicking on it.

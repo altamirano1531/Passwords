@@ -13,7 +13,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{87D97591-C870-4F21-A439-36275A79425F}
+AppId={{3449A9F2-7DFE-4D8C-974C-5B0FB138BD70}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -35,7 +35,7 @@ DisableProgramGroupPage=yes
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 OutputDir=C:\Workarea\Python\Passwords_2\Passwords\Inno
-OutputBaseFilename=Password_setup
+OutputBaseFilename=Passwords_setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -47,7 +47,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Workarea\Python\Passwords_2\Passwords\Inno\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Workarea\Python\Passwords_2\Passwords\output\Psswd\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Workarea\Python\Passwords_2\Passwords\output\Psswd\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]

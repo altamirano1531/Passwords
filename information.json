@@ -232,6 +232,13 @@
       "notes": "\n"
     },
     {
+      "name": "Microsoft",
+      "username": "altamirano1531@gmail.com",
+      "password": "Turicates1!",
+      "website": "https://account.microsoft.com",
+      "notes": "PIN:1531\nNotas finales 123\n\n\n\n\n"
+    },
+    {
       "name": "MongoDB",
       "username": "altamirano1531@gmail.com",
       "password": "Turicates1",
@@ -244,13 +251,6 @@
       "password": "ElVirus1960",
       "website": "https://myacm.acm.org/",
       "notes": ""
-    },
-    {
-      "name": "Mysite",
-      "username": "asd",
-      "password": "asd",
-      "website": "",
-      "notes": "q\tqw\n"
     },
     {
       "name": "NetFlix",
@@ -432,13 +432,6 @@
       "username": "altamirano123",
       "password": "ElVirus1960",
       "website": "https://www.reddit.com/",
-      "notes": "\n"
-    },
-    {
-      "name": "z",
-      "username": "",
-      "password": "",
-      "website": "",
       "notes": "\n"
     }
   ]

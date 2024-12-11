@@ -3,17 +3,17 @@ Passwords application Installation.
 
 The Passwords application was downloaded from Github to C:\Workarea\Python\Passwords_2\Passwords and streamlined to elimiante test files and code not needed to create the Psswd.exe file. Another objective is to create a distribution file so the Psswd application can be installed anywhere.
 
-Creation of the Psswd.exe file was attempted with PyInstaller. However an issue with the PyInstaller was found while executing relative paths in the code. Code to resolve this issue was added succesfully.
+Creation of the Psswd.exe file was attempted with PyInstaller. However an issue with the PyInstaller was found while executing relative paths in the code. Code to resolve this issue was added succesfully from recommendations found online.
 
 
 ### PyInstaller ###
 
 With the command/app.PyInstaller create and exe file. with the following command
 
-C:\Workarea\Python\Passwords_2\Passwords>pyinstaller --noconfirm --onefile --windowed --add-data "C:\Workarea\Python\Passwords_2\Passwords\information.json;." --add-data "C:\Workarea\Python\Passwords_2\Passwords\key.key;." --add-data "C:\Workarea\Python\Passwords_2\Passwords\passwords.enc;."  "C:\Workarea\Python\Passwords_2\Passwords\Psswd.py"
+C:\Workarea\Python\Passwords_2\Passwords>pyinstaller --noconfirm --onedir --windowed --add-data "C:\Workarea\Python\Passwords_2\Passwords\information.json;." --add-data "C:\Workarea\Python\Passwords_2\Passwords\key.key;." --add-data "C:\Workarea\Python\Passwords_2\Passwords\passwords.enc;."  "C:\Workarea\Python\Passwords_2\Passwords\Psswd.py"
 
-The Psswd.exe was created that contains all files needed to run the application.
-C:\Workarea\Python\Passwords_2\Passwords\dist\Psswd.exe 
+The build and dist folders were created with the dist folder containing the Psswd folder which in turn contains the _internal folder and Psswd.exe file.
+Running the same command with the --onefile parameter will create a simple Psswd.exe file, however while executing this exe the file save function does not work due to an issue with the relative paths handling with PyInstaller. 
 
 
 ### auto-py-to-exe ###
@@ -22,7 +22,7 @@ Another way of doing it is with the command/app auto-py-to-exe to create an exe 
 C:\Workarea\Python\Passwords_2\Passwords> auto-py-to-exe
 This opens the hi and then enter
 Sript location:C:/Workarea/Python/Passwords_2/Passwords/Psswd.py
-Onefile: One File
+Onefile: One Directory
 Console Window:Windows based (hide the console)
 Icon: N/A
 Additional Files:
@@ -31,8 +31,9 @@ C:/Workarea/Python/Passwords_2/Passwords/key.key
 C:/Workarea/Python/Passwords_2/Passwords/information.json
 Advanced:N/A
 Settings:N/A
-The Psswd.exe was created that contains all files needed to run the application.
-C:\Workarea\Python\Passwords_2\Passwords\output\Psswd.exe
+
+The output folders was created with th dist folder containing the Psswd folder which in turn contains the _internal folder and Psswd.exe file.
+Running the same command with the --onefile parameter will create a simple Psswd.exe file, however while executing this exe the file save function does not work due to an issue with the relative paths handling with PyInstaller. 
 
 This is the prefered method to create the Psswd.exe. This method uses the PyInstaller but also correct many issues with the PyInstaller plus there is a human interface to ease use of the PyInstaller commands.
 
